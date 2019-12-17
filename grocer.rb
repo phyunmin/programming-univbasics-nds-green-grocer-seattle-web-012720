@@ -63,6 +63,8 @@ def apply_coupons(cart, coupons)
       if(cart[cart_index][:item] == coupon[coupon_index][:item])
         if(cart[cart_index][:count]>=coupon[coupon_index][:num])
           cart[cart_index][:count] = cart[cart_index][:count] - coupon[coupon_index][:num]
+          new_item = "#{cart[cart_index][:item]} W/COUPON"
+          price = /coupon[coupon_index][:num]
         end
         break
       end
