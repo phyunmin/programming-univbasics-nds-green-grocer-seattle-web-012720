@@ -116,5 +116,6 @@ def checkout(cart, coupons)
   # some irritated customers
   array = []
   array = consolidate_cart(cart)
-  
+  array = apply_coupons(array, coupons)
+  array = apply_clearance(array)
 end
