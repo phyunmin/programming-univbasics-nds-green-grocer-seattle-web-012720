@@ -66,7 +66,7 @@ def apply_coupons(cart, coupons)
           new_item = "#{cart[cart_index][:item]} W/COUPON"
           price = coupon[coupon_index][:cost]/coupon[coupon_index][:num]
           clearance = cart[cart_index][:clearance]
-          count = 
+          count = coupon[coupon_index][:num]
         end
         break
       end
