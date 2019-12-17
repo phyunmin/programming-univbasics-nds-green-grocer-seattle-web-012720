@@ -118,4 +118,13 @@ def checkout(cart, coupons)
   array = consolidate_cart(cart)
   array = apply_coupons(array, coupons)
   array = apply_clearance(array)
+  total = 0
+  total_index = 0
+  while total_index<array.length do
+    total+= array[total_index][:count]*array[total_index][:price]
+    total_index+=1
+  end
+  if(total>100.0)
+    total = total * 0.9
+  end
 end
