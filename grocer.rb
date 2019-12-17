@@ -95,7 +95,7 @@ def apply_clearance(cart)
   pp cart
   cart_index =0
   while cart_index<cart.length do
-    if(cart[cart_index][:clearance]== true)
+    if(cart[cart_index][:clearance] == true)
       new_price = cart[cart_index][:price]*0.2
       cart[cart_index][:price] = new_price.round(2)
     end
