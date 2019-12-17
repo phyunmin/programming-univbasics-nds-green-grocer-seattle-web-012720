@@ -65,7 +65,7 @@ def apply_coupons(cart, coupons)
           #cart update
           cart[cart_index][:count] = cart[cart_index][:count] - coupon[coupon_index][:num]
           
-          #add couponitem
+          #add coupon item
           hash_new={}
           new_item = "#{cart[cart_index][:item]} W/COUPON"
           hash_new[:item] = new_item
