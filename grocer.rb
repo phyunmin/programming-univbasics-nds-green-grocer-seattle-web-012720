@@ -68,7 +68,7 @@ def apply_coupons(cart, coupons)
           
           #add coupon item
           hash_new={}
-          new_item = "#{cart[cart_index][:item]} W/COUPON"
+          new_item = "#{coupon[coupon_index][:item]} W/COUPON"
           hash_new[:item] = new_item
           price = coupon[coupon_index][:cost]/coupon[coupon_index][:num]
           hash_new[:price] = price
