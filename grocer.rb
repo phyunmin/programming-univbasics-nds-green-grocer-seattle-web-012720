@@ -63,7 +63,7 @@ def apply_coupons(cart, coupons)
       if(cart[cart_index][:item] == coupon[coupon_index][:item])
         if(cart[cart_index][:count]>=coupon[coupon_index][:num])
           #cart update
-          cart[cart_index][:count] = cart[cart_index][:count] - coupon[coupon_index][:num]
+          new_cout = cart[cart_index][:count] - coupon[coupon_index][:num]
           
           #add coupon item
           hash_new={}
