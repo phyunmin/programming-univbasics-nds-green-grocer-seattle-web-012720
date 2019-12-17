@@ -62,11 +62,20 @@ def apply_coupons(cart, coupons)
     while coupon_index < coupon.length do
       if(cart[cart_index][:item] == coupon[coupon_index][:item])
         if(cart[cart_index][:count]>=coupon[coupon_index][:num])
+          #cart update
           cart[cart_index][:count] = cart[cart_index][:count] - coupon[coupon_index][:num]
+          
+          #add couponitem
+          hash_new={}
           new_item = "#{cart[cart_index][:item]} W/COUPON"
+          hash_new[:item] = new_item
           price = coupon[coupon_index][:cost]/coupon[coupon_index][:num]
+          hash_new[:price] = price
           clearance = cart[cart_index][:clearance]
+          hash_new[:clearance] = clearance
           count = coupon[coupon_index][:num]
+          hash_new[:count] = count
+          cart << hash_new
         end
         break
       end
